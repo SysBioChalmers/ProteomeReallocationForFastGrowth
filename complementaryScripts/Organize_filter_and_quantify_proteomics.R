@@ -43,7 +43,7 @@ S288c[S288c=="01-Oct"] <- as.character('OCT1')
 
 data_anaerobic_2 <- merge(data_anaerobic,iBAQ,by='Accession',all.y = TRUE)
 
-# Remove proteins with only 1 PSM (to reduce worst effect of variability between samples for a protein), based on consultance
+# Remove proteins with only 1 PSM
 data_anaerobic_2 <- data_anaerobic_2[data_anaerobic_2$PSMs > 1, ]
 
 # We also use cut-offs for the TMT-value of a protein (level in sample compared to reference)
@@ -51,7 +51,7 @@ data_anaerobic_2 <- data_anaerobic_2[data_anaerobic_2$PSMs > 1, ]
 # these are seen as non-existant since they are very low and we cannot now the exact value
 # This cutoff is done after separating data-set into min and rich, as we believe that this
 # protein may be present in one of the samples although it is regarded as non-present in the other
-# As a higher cutoff we use the limit of 10, after consulting with proteomics consultant
+# As a higher cutoff we use the limit of 10.
 # This was done because the values get significantly less reliable as they get larger, since we will compare sums of proteins
 # between rich and minimal, we do not want the same protein to take over in one of the samples
 # with a quantified mass percentage that can be very much over-estimated in one of rich or min
@@ -171,7 +171,7 @@ glu_proteomics_anaerobic <- na.omit(glu_proteomics_anaerobic)
 
 data_aerobic_2 <- merge(data_aerobic,iBAQ,by='Accession',all.y = TRUE)
 
-# Remove proteins with only 1 PSM (to reduce worst effect of variability between samples for a protein), based on consultance
+# Remove proteins with only 1 PSM
 data_aerobic_2 <- data_aerobic_2[data_aerobic_2$PSMs > 1, ]
 
 # We also use cut-offs for the TMT-value of a protein (level in sample compared to reference)
@@ -179,7 +179,7 @@ data_aerobic_2 <- data_aerobic_2[data_aerobic_2$PSMs > 1, ]
 # these are seen as non-existant since they are very low and we cannot now the exact value
 # This cutoff is done after separating data-set into min and rich, as we believe that this
 # protein may be present in one of the samples although it is regarded as non-present in the other
-# As a higher cutoff we use the limit of 10, after consulting with proteomics consultant
+# As a higher cutoff we use the limit of 10.
 # This was done because the values get significantly less reliable as they get larger, since we will compare sums of proteins
 # between rich and minimal, we do not want the same protein to take over in one of the samples
 # with a quantified mass percentage that can be very much over-estimated in one of rich or min

@@ -57,7 +57,7 @@ data_anaerobic_2 <- data_anaerobic_2[data_anaerobic_2$PSMs > 1, ]
 # with a quantified mass percentage that can be very much over-estimated in one of rich or min
 
 # We do this cutoff strict, in the sense that we remove a protein from all samples if it does not lie
-# within the high-cutoff. To always compute protein abundancies from triplicate values 
+# within the high-cutoff, to always compute protein abundancies from triplicate values 
 
 TMT_cutoff_high <- 10
 #
@@ -185,7 +185,7 @@ data_aerobic_2 <- data_aerobic_2[data_aerobic_2$PSMs > 1, ]
 # with a quantified mass percentage that can be very much over-estimated in one of rich or min
 
 # We do this cutoff strict, in the sense that we remove a protein from all samples if it does not lie
-# within the high-cutoff. To always compute protein abundancies from triplicate values 
+# within the high-cutoff, to always compute protein abundancies from duplicate values (replicates_3 removed after manual quality control) 
 
 TMT_cutoff_high <- 10
 #
